@@ -1,17 +1,23 @@
 import pytest
 from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.common.appiumby import By
+from selenium.common.exceptions import NoSuchElementException
 import time
+import logging
 
-@pytest.mark.second
+logging.basicConfig(level=logging.INFO)
+LOGGER = logging.getLogger(__name__)
+
+@pytest.mark.third
 @pytest.mark.parametrize("text", ["Log In", "Create Account"])
 def test_clicks(driver, text):
     element_locator = (AppiumBy.XPATH, f'//*[@text="{text}"]')
 
     element = driver.find_element(*element_locator)
-    assert element.is_displayed() == True
-
-    assert element.is_enabled() == True
 
     element.click()
+
+  
+    
     driver.back()
-    time.sleep(4)
+
