@@ -29,3 +29,10 @@ password - qa_automation_password
 
 added get_udid.py
 changed confest.py(instead of writing udid, now it uses module get_udid.py to access udid from connected device)
+
+
+### 5 commit 
+
+added new coftest.py, also added test_menu.py, which tests pressing buttons in sidebar
+
+:) thx for ur time)

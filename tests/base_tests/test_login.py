@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 
-
+@pytest.mark.fourth
 @pytest.mark.parametrize("email, password", [("test@gmail.com", "password123")])
 def test_login_incorrect(driver, email, password):
     time.sleep(3)
@@ -44,7 +44,7 @@ def test_login_incorrect(driver, email, password):
 
 
 
-
+@pytest.mark.fifth 
 @pytest.mark.parametrize("email, password", [("qa.ajax.app.automation@gmail.com", "qa_automation_password")])
 def test_login_correct(driver, email, password):
     element_locator = WebDriverWait(driver, 10).until(
