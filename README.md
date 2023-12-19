@@ -22,3 +22,10 @@
 ### Login credentials
 login - qa.ajax.app.automation@gmail.com
 password - qa_automation_password
+
+
+
+### 4 commit
+
+added get_udid.py
+changed confest.py(instead of writing udid, now it uses module get_udid.py to access udid from connected device)

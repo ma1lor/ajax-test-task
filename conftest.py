@@ -5,12 +5,14 @@ from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction
 from appium.options.android import UiAutomator2Options
 import time
+from get_udid import get_device_udid
+
 
 
 capabilities = dict(
     platformName='Android',
     automationName='uiautomator2',
-    deviceName='R38M300APGE',
+    deviceName=get_device_udid(),
     appPackage='com.ajaxsystems',
     appActivity='com.ajaxsystems.ui.activity.LauncherActivity',
     language='en',
